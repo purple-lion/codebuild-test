@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - apt-get Update
+      - apt-get isntall -y jq
+  pre_build:
+    commands:
+      - env | sort
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - export IMAGE_TAG=$(cat VERSION.txt)
+      - echo "IMAGE_TAG: ${IMAGE_TAG}"
+  post_build:
+    commands:
+      - echo Build completed on `date`
