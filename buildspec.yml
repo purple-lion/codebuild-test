@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get Update
+      - apt-get update
       - apt-get isntall -y jq
   pre_build:
     commands:
