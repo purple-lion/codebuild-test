@@ -12,7 +12,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - export IMAGE_TAG=$(cat VERSION.txt)
-      - echo "IMAGE_TAG: ${IMAGE_TAG}"
+      - echo "IMAGE_TAG ${IMAGE_TAG}"
   post_build:
     commands:
       - echo Build completed on `date`
+
