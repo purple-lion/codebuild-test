@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get isntall -y jq
+      - apt-get install -y jq
   pre_build:
     commands:
       - env | sort
